@@ -14,6 +14,10 @@ public class DIYArrayList<T> implements List<T> {
     private Object[] array;
     private int size = 0;
 
+    public DIYArrayList(int capacity) {
+        array = new Object[capacity];
+    }
+
     public DIYArrayList(T... items) {
         array = new Object[Math.max(INITIAL_CAPACITY, items.length)];
         for (var item : items) {
